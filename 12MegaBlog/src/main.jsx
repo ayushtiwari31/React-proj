@@ -9,13 +9,13 @@ import Home from './Pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
 
-import AddPost from "./Pages/AddPost";
-import Signup from './Pages/Signup'
-import EditPost from "./pages/EditPost";
+import AddPost from "./Pages/AddPost.jsx";
+import Signup from './Pages/Signup.jsx'
+import EditPost from "./Pages/EditPosts.jsx";
 
-import Post from "./Pages/Post";
+import Post from "./Pages/Post.jsx";
 
-import AllPosts from "./Pages/AllPosts";
+import AllPosts from "./Pages/AllPosts.jsx";
 
 const router=createBrowserRouter([
   {
@@ -28,15 +28,16 @@ const router=createBrowserRouter([
       }
       ,
       {
-        path:"/login",
+        path:"login",
         element:(
+          // <Login/>
           <AuthLayout authentication={false}>
             <Login/>
           </AuthLayout>
         )
       },
       {
-        path: "/signup",
+        path: "signup",
         element: (
             <AuthLayout authentication={false}>
                 <Signup />

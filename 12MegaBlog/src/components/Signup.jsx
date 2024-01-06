@@ -25,7 +25,7 @@ function Signup() {
                 navigate("/")
             }
         } catch (error) {
-            setError(err.message)
+            setError(error.message)
         }
     }
 
