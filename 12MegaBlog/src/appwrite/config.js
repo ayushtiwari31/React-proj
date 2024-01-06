@@ -17,7 +17,7 @@ export class Service{
         this.bucket=new Storage(this.client)
     }
 
-    async createpost({title,slug,content,featuredImage,status,userId})
+    async createPost({title,slug,content,featuredImage,status,userId})
     {
         try {
             return await this.databases.createDocument(
@@ -96,7 +96,7 @@ export class Service{
 
     //file upload service
 
-    async uploadfile(file)
+    async uploadFile(file)
     {
         try {
             return await this.bucket.createFile(
